@@ -1,0 +1,39 @@
+.apps_bg {
+    background-image: url("../../assets/imges/landing-page/sec-5/Vector.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size:cover;
+    background-origin: border-box;
+    background-size: 400px 500px;
+    height:60vh;
+    margin-top: 0;
+    @media(max-width: 768px) {
+        background-position: center;
+        background-size: 14rem;
+        height: 60vh;  
+        text-align: center;
+        margin:3rem 0
+    }
+}
+.info {
+    padding: 0.7rem 1.5rem !important;
+    border-radius: 80px !important;
+    -webkit-border-radius: 80px !important;
+    -moz-border-radius: 80px !important;
+    -ms-border-radius: 80px !important;
+    -o-border-radius: 80px !important;
+    background: #CEDCFF!important;
+    width: 20px !important ;
+    [placeholder] {
+    font-weight: 500 !important;
+}
+
+}
+
+
+.apps_img {
+    width: 20%;
+    @media(max-width: 768px) {
+        width: 40%;
+    }
+}

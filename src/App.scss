@@ -1,0 +1,76 @@
+:root {
+  --blue: #1572d3;
+  /* --red: #ec5453;
+  --yellow: #f9bf3f;
+  --purbel :#a84cb8;
+  --green: #2fa499;
+  --navy:#4054b2 ; */
+}
+
+html, body {
+  overflow-y: inherit !important;
+  overflow-x: hidden !important;;
+  background-color: #ffffff;
+}
+
+.container-fluid{
+padding-left: 0 !important;
+padding-right: 0 !important;
+}
+
+.popular_btn{
+    background-color:#edf1fa;
+    color: #4a70f8;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem !important;
+    font-weight: 400 !important;
+    border: 1px solid #1572d31a;
+
+    @media (max-width: 768px) {
+       padding: 0.4rem 0.8rem; 
+        font-size: 0.9rem !important;
+        font-weight: bold !important;
+    }
+}
+
+
+// common classes start
+.popular_title {
+    font-size: 2.9rem !important;
+    font-weight: 600 !important;
+    line-height: 1.2;
+    margin: 1.8rem 0 ;
+    
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem !important;
+        font-weight: 500 !important;
+        line-height: 1.5;
+        margin: 0.7rem 0 ; 
+    }
+}
+
+
+
+.choose_us_bg {
+
+    background-image: url("./assets/imges/landing-page/sec-5/Vector.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size:cover;
+    background-origin: border-box;
+    background-size: 1000px;
+    height: 70vh;
+    margin-top: 0;
+    @media(max-width: 768px) {
+        background-position: center;
+        background-size: 14rem;
+        height: 70vh;  
+    }
+}
+
+
+
+
+// common classes end
+

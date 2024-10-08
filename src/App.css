@@ -1,0 +1,50 @@
+:root {
+  --blue: #1572d3;
+  /* --red: #ec5453;
+  --yellow: #f9bf3f;
+  --purbel :#a84cb8;
+  --green: #2fa499;
+  --navy:#4054b2 ; */
+}
+
+html, body {
+  overflow-y: inherit !important;
+  overflow-x: hidden !important;
+  background-color: #ffffff;
+}
+
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.popular_btn {
+  background-color: #edf1fa;
+  color: #4a70f8;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
+  border: 1px solid rgba(21, 114, 211, 0.1019607843);
+}
+@media (max-width: 768px) {
+  .popular_btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem !important;
+    font-weight: bold !important;
+  }
+}
+
+.popular_title {
+  font-size: 2.9rem !important;
+  font-weight: 600 !important;
+  line-height: 1.2;
+  margin: 1.8rem 0;
+}
+@media (max-width: 768px) {
+  .popular_title {
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    line-height: 1.5;
+    margin: 0.7rem 0;
+  }
+}/*# sourceMappingURL=App.css.map */

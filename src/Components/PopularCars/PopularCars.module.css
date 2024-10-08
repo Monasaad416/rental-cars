@@ -1,0 +1,21 @@
+/* popular title start */
+.show_all {
+  padding: 0.5rem 3rem !important;
+  font-size: 1.3rem !important;
+  font-weight: normal !important;
+}
+
+.deals img {
+  width: 8rem;
+}
+
+h5 {
+  font-size: 1.7rem !important;
+  padding: 0.8rem 0 !important;
+}
+
+small {
+  font-size: 1rem !important;
+}
+
+/* popular title end *//*# sourceMappingURL=PopularCars.module.css.map */
