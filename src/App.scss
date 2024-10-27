@@ -60,12 +60,12 @@ padding-right: 0 !important;
     background-size:cover;
     background-origin: border-box;
     background-size: 1000px;
-    height: 70vh;
+    height: auto !important;
     margin-top: 0;
     @media(max-width: 768px) {
         background-position: center;
         background-size: 14rem;
-        height: 70vh;  
+        height: auto !important;;  
     }
 }
 

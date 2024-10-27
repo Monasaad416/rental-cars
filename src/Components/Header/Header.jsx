@@ -6,9 +6,13 @@ import animationImg from "../../assets/imges/landing-page/car 2 1.png"
 
 
 
+
 export default function Header() {
 
 
+
+
+      
   return (
     <div>
       <div className="mb-5">
@@ -92,15 +96,15 @@ export default function Header() {
               {/* Navbar end */}
 
               {/* animation start */}
-              <div className={ ` ${styles.animation_img_container}`}>
+              <div className={` ${styles.animation_img_container}`}>
                 <div className="row mt-md-5 mt-1">
                   <div
-                    className={`mt-md-5 mt-1 pt-md-5 col-md-4 order-md-1 order-2`}
+                    className={`mt-md-5 mt-md-1 pt-md-5 col-md-4 order-md-1 order-2`}
                   >
-                    <div
-                      className={`${styles.animation_text} `}
-                    >
-                      <h1 className={`fw-md-bolder fw-bold ${styles.animation_heading}`}>
+                    <div className={`${styles.animation_text} text-center`}>
+                      <h1
+                        className={`fw-md-bolder fw-bold ${styles.animation_heading}`}
+                      >
                         Find, book and rent a car{" "}
                         <span className={`${styles.animation_span}`}>
                           Easily{" "}
@@ -127,32 +131,10 @@ export default function Header() {
                   </div>
                 </div>
 
-                {/* search bar start */}
-                <div className="row">
-                  <div className="col-12 my-1">
-                    <div className={`${styles.search_bar}`}>
-                      <input
-                        type="text text-absolute"
-                        className="form-control"
-                        placeholder="search by name"
-                      />
-                      <button
-                        className={`btn btn-primary fs-5 ${styles.search_btn}`}
-                      >
-                        Search
-                      </button>
-
-                      <button
-                        className={`btn btn-light ${styles.location_btn}`}
-                      >
-                        <i className="fa-solid fa-location-dot"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                {/* search bar start */}
               </div>
               {/* animation end */}
+
+              
             </div>
           </div>
         </div>

@@ -1,27 +1,47 @@
 // import styles from 'AllCars.module.scss';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Car from '../Car/Car';
+import CustomPagination from '../CustomPagination/CustomPagination.jsx';
+
+
 
 export default function Cars() {
 
-  let [allCars,setAllCars] = useState([])
-  
-  let getAllcars = async () => {
+  const [allCars,setAllCars]=useState([])
+  const [page, setPage] = useState(1)
+  const carsPerPage = 16
+
+  const getAllcars = async () => {
     try {
-          let response = await axios.get("https://freetestapi.com/api/v1/cars"); 
-          setAllCars(response?.data);
-          console.log(allCars);
-    } catch (e) {
-      console.log(e)
-    }
+          let response = await axios.get(
+            "https://myfakeapi.com/api/cars/"
+          ); 
+
+          setAllCars(response?.data?.cars);
+
+          
+      } catch (e) {
+        console.log(e)
+      }
   }
 
-  
-  useEffect(() => {
-    getAllcars()
-  }, [])
 
+  useEffect(() => {
+    getAllcars();
+  }, []);
+
+  
+  const totalCars = allCars.length;
+  const totalPages = Math.ceil(totalCars / carsPerPage);
+  const indexOfLastCar = page * carsPerPage;
+  const indexOfFirstCar = indexOfLastCar - carsPerPage;
+  const currentCars = allCars.slice(indexOfFirstCar, indexOfLastCar);
+
+  const handleChangePage = useCallback((newPage) => {
+    setPage(newPage);
+  }, []);
 
   return (
     <div className="container">
@@ -52,20 +72,25 @@ export default function Cars() {
         </div>
       </div>
       <div className="row">
+        {currentCars.length > 0 ? (
+          currentCars.map((car) => <Car key={car.id} car={car} />)
+        ) : (
+          <p className="text-muted">Loading...</p>
+        )}
+      </div>
 
-        {allCars.map((car) => {
-          <div key={car.id} className="col-md-3">
-            
-            <div className="card">
-              <img src="..." className="card-img-top" alt="..."/>
-              <div className="card-body">
-                <h5 className="card-title">{ car.model }</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
+      <div className="row mt-5">
+        <div className="col">
+          <div className="d-flex justify-content-center">
+            {totalPages > 1 && (
+              <CustomPagination
+                total={totalPages}
+                current={page}
+                onChangePage={handleChangePage}
+              ></CustomPagination>
+            )}
           </div>
-        })}
+        </div>
       </div>
     </div>
   );

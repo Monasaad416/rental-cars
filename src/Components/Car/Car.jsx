@@ -3,28 +3,35 @@ import userIcon from "../../assets/imges/card/user.png";
 import arrowRight from "../../assets/imges/card/arrow-right.png";
 import ac from "../../assets/imges/card/d8wxke_2_.png";
 import frame from "../../assets/imges/card/Frame.png";
+import car1 from "../../assets/imges/card/car1.png";
+import car2 from "../../assets/imges/card/car2.png";
 import car3 from "../../assets/imges/card/car3.png";
+import { Link } from "react-router-dom";
 
 
 export default function Car(props) {
-       console.log(props);
+       //console.log(props);
        let {car} = props;
+
+       const carColors = [car1,car2,car3]
   return (
- 
-    <div  className="col-md-3">
+    <div className="col-md-3 mt-3">
       <div className="card">
         <img
-          src={car3}
+          src={carColors[Math.floor(Math.random() * carColors.length)]} // Correctly access the random car color
           className="card-img-top w-75 m-auto d-block my-2"
           alt="popular-car"
         />
 
         <div className="card-body">
-          <h5 className="card-title fs-3">BMW X5</h5>
-          <div className="d-flex align-items-baseline">
-            <img src={star} alt="review" />
-            <h6 className="mx-1">4.6</h6>
-            <small className="text-muted">(1345 reviews)</small>
+          <h5 className="card-title fs-3">{car.car_model}</h5>
+          <div className="d-flex justify-content-between">
+            <div>
+              <img src={star} alt="review" />
+              <small className="text-muted">(1345 reviews)</small>
+            </div>
+
+            {/* <h6 className="mx-1">{car.price}</h6> */}
           </div>
 
           <div className="d-flex justify-content-between">
@@ -53,14 +60,19 @@ export default function Car(props) {
           <div className="d-flex justify-content-between">
             <p className="text-muted">Price</p>
             <div className="d-flex">
-              <h6>$55000</h6> / <p className="text-muted">day</p>
+              <h6>{car.price}</h6> / <p className="text-muted">day</p>
             </div>
           </div>
           <div>
             <button type="button" className="btn btn-primary w-100">
-              {" "}
-              View details
-              <img src={arrowRight} alt="arrowRight" className="ms-2" />
+              <Link
+                to={`/home/all-vehicles/${car.id}`}
+                className="text-white text-decoration-none"
+              >
+                {" "}
+                View details
+                <img src={arrowRight} alt="arrowRight" className="ms-2" />
+              </Link>
             </button>
           </div>
         </div>

@@ -47,4 +47,22 @@ html, body {
     line-height: 1.5;
     margin: 0.7rem 0;
   }
+}
+
+.choose_us_bg {
+  background-image: url("./assets/imges/landing-page/sec-5/Vector.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  background-origin: border-box;
+  background-size: 1000px;
+  height: auto !important;
+  margin-top: 0;
+}
+@media (max-width: 768px) {
+  .choose_us_bg {
+    background-position: center;
+    background-size: 14rem;
+    height: auto !important;
+  }
 }/*# sourceMappingURL=App.css.map */

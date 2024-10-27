@@ -5,14 +5,14 @@
   background-size: cover;
   background-origin: border-box;
   background-size: 400px 500px;
-  height: 60vh;
+  height: auto !important;
   margin-top: 0;
 }
 @media (max-width: 768px) {
   .apps_bg {
     background-position: center;
     background-size: 14rem;
-    height: 60vh;
+    height: auto !important;
     text-align: center;
     margin: 3rem 0;
   }
